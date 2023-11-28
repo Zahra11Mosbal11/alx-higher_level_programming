@@ -5,4 +5,4 @@ def uppercase(string):
         if 97 <= ord(character) <= 122:
             character = chr(ord(character) - 32)
         string_new += character
-    print(string_new)
+    print("{:s}".format(string_new))
