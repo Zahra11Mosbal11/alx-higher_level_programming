@@ -4,4 +4,4 @@ for tens in range(0, 10):
         if (tens * 10 + ones) == 89:
             print("{:02}".format(tens * 10 + ones))
         else:
-            print("{:02}, ".format(tens* 10 + ones), end="")
+            print("{:02}, ".format(tens * 10 + ones), end="")
