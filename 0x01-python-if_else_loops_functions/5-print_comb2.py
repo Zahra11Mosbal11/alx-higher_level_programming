@@ -7,4 +7,3 @@ for number in range(0, 100):
     else:
         formatted_number = "{}, ".format(number)
     print("{}".format(formatted_number), end="")
-
