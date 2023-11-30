@@ -15,7 +15,7 @@ if __name__ == "__main__":
         b = int(sys.argv[3])
 
         if op not in ['+', '-', '*', '/']:
-            print("{}".format("Unknown operator. Available operators: +, -, * and /"))
+            print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
         else:
             if op == '+':
