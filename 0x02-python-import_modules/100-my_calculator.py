@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-import sys
-from calculator_1 import add, sub, mul, div
-
 if __name__ == "__main__":
-    
+
+    import sys
+    from calculator_1 import add, sub, mul, div
+
     args = len(sys.argv)
 
     if args != 4:
