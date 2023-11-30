@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 if __name__ == "__main__":
 
     import sys
@@ -8,8 +7,8 @@ if __name__ == "__main__":
     args = len(sys.argv)
 
     if args != 4:
-        print("{}".format("Usage: ./100-my_calculator.py <a> <operator> <b>"))
-        sys.exit(1)
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
     else:
         a = int(sys.argv[1])
         op = sys.argv[2]
@@ -17,7 +16,7 @@ if __name__ == "__main__":
 
         if op not in ['+', '-', '*', '/']:
             print("{}".format("Unknown operator. Available operators: +, -, * and /"))
-            sys.exit(1)
+            exit(1)
         else:
             if op == '+':
                 print("{} + {} = {}".format(a, b, add(a, b)))
