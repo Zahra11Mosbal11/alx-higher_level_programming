@@ -5,7 +5,7 @@ def multiple_returns(sentence):
         first = "None"
 
     else:
-        first = sentence[0:1]
+        first = sentence[0]
     
     tu = (len_str, first)
     return (tu)
