@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    if sentence == "":
-        first = None
+    len_str  = len(sentence)
+    if len_str == 0:
+        first = "None"
 
     else:
         first = sentence[0:1]
     
-    len_str  = len(sentence)
     tu = (len_str, first)
     return (tu)
