@@ -6,6 +6,6 @@ def best_score(a_dictionary):
     for x in a_dictionary:
         if i < a_dictionary[x]:
             i = a_dictionary[x]
-    for x in a_dictionary:
-        if i == a_dictionary[x]:
-            return x
+    for y in a_dictionary:
+        if i == a_dictionary[y]:
+            return y
