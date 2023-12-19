@@ -4,7 +4,7 @@
 
 class Square:
     """
-    Class that defines properties of square by: (based on 2-square.py).
+    Class that defines properties of square by: (based on 5-square.py).
 
     Attributes:
         size: size of a square (1 side).
@@ -18,6 +18,13 @@ class Square:
         """
         self.size = size
         self.position = position
+
+    def area(self):
+        """Calculates the area of square.
+
+        Returns: the current square area.
+        """
+        return self.__size ** 2
 
     @property
     def size(self):
@@ -50,10 +57,10 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """property setter for position.
+        """Property setter for position.
 
         Args:
-             value (tuple): position of the square.
+            value (tuple): position of the square.
 
         Raises:
             TypeError: position must be a tuple of 2 positive integers
@@ -68,20 +75,12 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
-    def area(self):
-        """Calculates the area of square.
-
-        Returns: the current square area.
-        """
-        return (self.__size * self.__size)
-
     def my_print(self):
-        """That prints in stdout the square with the character #.
+        """prints in stdout the square with the character #
         """
-
 
         if self.__size == 0:
-            print("")
+            print()
         else:
             for j in range(self.__position[1]):
                 print()
