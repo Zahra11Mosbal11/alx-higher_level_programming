@@ -94,12 +94,17 @@ class SinglyLinkedList:
         Args:
             value: value.
         """
+        new_node = Node(value)
         if self.__head is None:
-            new_node = Node(value)
+            new_node.next_node = None
+            self.__head = new_node
+        elif self.__head.data > value:
             new_node.next_node = self.__head
             self.__head = new_node
         else:
-            new_node = Node(value)
-            new_node.data = value
-            new_node.next_node = self.__head
-            self.__head = new_node
+            tmp = self.__head
+            while (tmp.next_node is not None and
+                    tmp.next_node.data < value):
+                tmp = tmp.next_node
+            new.next_node = tmp.next_node
+            tmp.next_node = new_node
