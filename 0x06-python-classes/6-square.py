@@ -44,10 +44,10 @@ class Square:
 
     @property
     def position(self):
-
         """Returns the position of the square
         """
         return self.__position
+
     @position.setter
     def position(self, value):
         """property setter for position.
@@ -69,7 +69,9 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Return the current area of the square.
+        """Calculates the area of square.
+
+        Returns: the current square area.
         """
         return (self.__size * self.__size)
 
