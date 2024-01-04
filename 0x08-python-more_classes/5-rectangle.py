@@ -67,5 +67,5 @@ class Rectangle:
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        """Destructor method called when the object is about to be destroyed."""
+        """Destructor method called when the object be destroyed."""
         print("{}".format("Bye rectangle..."))
