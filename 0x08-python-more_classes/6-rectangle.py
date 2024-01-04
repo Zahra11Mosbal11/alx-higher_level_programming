@@ -74,5 +74,5 @@ class Rectangle:
 
     def __del__(self):
         """Destructor method called when the object be destroyed."""
-        type(self).number_of_instances -=1
+        type(self).number_of_instances -= 1
         print("{}".format("Bye rectangle..."))
