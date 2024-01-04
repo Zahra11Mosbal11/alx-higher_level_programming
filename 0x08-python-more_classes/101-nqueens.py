@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Solves the N-queens puzzle"""
+"""Solves the N-queens puzzle Determines all possible solutions to placing N on-attacking queens on an NxN chessboard."""
 
 import sys
 
