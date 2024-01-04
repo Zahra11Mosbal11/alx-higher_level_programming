@@ -67,6 +67,4 @@ class Rectangle:
         """Representation of the rectangle to be able to recreate a new instance by using eval()
         """
 
-        rect = "Rectangle({self.__width},"
-        rect = " {self.__height})"
-        return rect
+        return f"Rectangle({self.__width}, {self.__height})"
