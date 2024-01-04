@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Defines a class Rectangle"""
+"""Defines a Rectangle class."""
 
 
 class Rectangle:
@@ -17,7 +17,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Getter method for retrieving the width."""
+        """Get/set the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -30,7 +30,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Getter method for retrieving the height."""
+        """Get/set the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -42,15 +42,15 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """That returns the rectangle area."""
+        """Return the area of the Rectangle."""
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """Return 2*width + 2*height (or return 0 if width or height is 0)"""
+        """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
-            return 0
-        return ((2 * self.__width) + (2 * self.__height))
-    
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
+
     def __str__(self):
         """Return the printable representation of the Rectangle.
         Represents the rectangle with the # character.
