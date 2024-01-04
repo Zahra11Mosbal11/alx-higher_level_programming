@@ -3,15 +3,14 @@
 
 
 class Rectangle:
-    """
-    Class that defines properties of Rectangle by: (based on 0-rectangle.py).
+    """Class that defines properties of Rectangle."""
 
-    Attributes:
-        width: The width of rectangle.
-        height: the heidht of rectangle.
-    """
     def __init__(self, width=0, height=0):
-        """Creates new instances of rectangle"""
+        """Initialize a new Rectangle.
+        Args:
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
+        """
         self.width = width
         self.height = height
 
@@ -22,15 +21,6 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Property setter for width.
-
-        Args:
-            value (int): size of a rectangle.
-
-        Raises:
-            TypeError: width must be an integer
-            ValueError: width must be >= 0
-        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -44,15 +34,6 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Property setter for height.
-
-        Args:
-            value (int): size of a rectangle.
-
-        Raises:
-            TypeError: height must be an integer
-            ValueError: height must be >= 0
-        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -68,7 +49,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return ((2 * self.__width) + (2 * self.__height))
-    
+
     def __str__(self):
         """Return the printable representation of the Rectangle.
         Represents the rectangle with the # character.
@@ -82,9 +63,9 @@ class Rectangle:
         return rect.rstrip("\n")
 
     def __repr__(self):
-        """Representation of the rectangle to be able to recreate a new instance by using eval()
-        """
+        """Representation of the rectangle to be able to recreate a new"""
         return f"Rectangle({self.__width}, {self.__height})"
+
     def __del__(self):
         """Destructor method called when the object is about to be destroyed."""
         print("{}".format("Bye rectangle..."))
