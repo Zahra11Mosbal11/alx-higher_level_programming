@@ -1,51 +1,20 @@
 #!/usr/bin/python3
-"""Contains the class BaseGeometry and subclass Rectangle"""
-
-
-class BaseGeometry:
-    """A class with public instance methods area and integer_validator"""
-    def area(self):
-        """raises an exception when called"""
-        raise Exception("area() is not implemented")
-
- def integer_validator(self, name, value):
-        """Validates that value is an integer greater than 0"""
-        if type(value) is not int:
-            raise TypeError("{:s} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{:s} must be greater than 0".format(name))
-
-
-class Rectangle(BaseGeometry):
-    """A representation of a rectangle"""
-    def __init__(self, width, height):
-        """instantiation of the rectangle"""
-        self.integer_validator("width", width)
-        self.__width = width
-        self.integer_validator("height", height)
-        self.__height = height
-
-    def area(self):
-        """returns the area of the rectangle"""
-        return self.__width * self.__height
-
-    def __str__(self):
-        """informal string representation of the rectangle"""
-        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
+'''Module for Rectangle class.'''
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """A representation of a square"""
+    '''A subclass representing a rectangle.'''
     def __init__(self, size):
-        """instantiation of the square"""
+        '''Constructor.'''
         self.integer_validator("size", size)
         self.__size = size
         super().__init__(size, size)
 
     def area(self):
-        """"returns the area of the square"""
+        '''Method for area of square.'''
         return self.__size ** 2
 
     def __str__(self):
-        """informal string reepresentation of the square"""
-        return "[Square] {:d}/{:d}".format(self.__size, self.__size)
+        '''Returns string representation of this square.'''
+        return "[Square] " + str(self.__size) + "/" + str(self.__size)
