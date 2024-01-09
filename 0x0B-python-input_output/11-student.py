@@ -14,7 +14,9 @@ class Student:
         """That retrieves a dictionary representation of a Student"""
         if attrs is None:
             return self.__dict__
-        return {ky: val for ky, val in self.__dict__.items() if ky in attrs}
+
+        ret = {ky: val for ky, val in self.__dict__.items() if ky in attrs}
+        return ret
 
     def reload_from_json(self, json):
           """Replace all attributes of the Student instance"""
