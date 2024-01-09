@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Will contains 7-base_geometry.py'''
 
+
 class BaseGeometry:
     '''A class with public instance methods area and integer_validator'''
     def area(self):
