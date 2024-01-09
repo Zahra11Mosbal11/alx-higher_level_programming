@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 '''Will contains 10-square.py'''
-
-
 Rectangle = __import__('9-rectangle').Rectangle
 
 

@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-'''
-Contains the class BaseGeometry and subclass Rectangle
-'''
-
+'''Contains the class BaseGeometry and subclass Rectangle'''
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
