@@ -97,12 +97,18 @@ class Rectangle(Base):
 
     def __str__(self):
         """That it returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(
-                self.id,self.x, self.y,self.width, self.height
-        )
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update the attributes of the Rectangle."""
         attrs = ["id", "width", "height", "x", "y"]
-        for i, val in enumerate(args):
-            setattr(self, attrs[i], val)
+        if args:
+            for i, val in enumerate(args):
+                setattr(self, attrs[i], val)
+
+        elif kwargs:
+            for key, value in kwargs.items():
+                if key in attrs:
+                    setattr(self, key, value)
