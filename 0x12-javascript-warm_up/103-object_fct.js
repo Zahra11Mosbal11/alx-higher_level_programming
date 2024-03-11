@@ -5,7 +5,7 @@ const myObject = {
 };
 console.log(myObject);
 
-myObject.incr = function increment() {
+myObject.incr = function () {
   this.value++;
 };
 
