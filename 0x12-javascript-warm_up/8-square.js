@@ -2,14 +2,13 @@
 let i;
 let j;
 const x = process.argv[2];
-const isInt = parseInt(x);
 
-if (isNaN(isInt)) {
-  console.log('Missing size');
+if (x === undefined || isNaN(parseInt(x))) {
+  console.log('Missing or invalid size');
 } else {
-  for (i = 0; i < x; i++) {
+  for (i = 0; i < parseInt(x); i++) {
     let row = '';
-    for (j = 0; j < x; j++) {
+    for (j = 0; j < parseInt(x); j++) {
       row += 'X ';
     }
     console.log(row);
