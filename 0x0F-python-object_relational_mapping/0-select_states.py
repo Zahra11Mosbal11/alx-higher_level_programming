@@ -6,7 +6,8 @@ import sys
 
 if __name__ == "__main__":
     """it will be calling when in main"""
-    mydb = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    mydb = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
+                           db=sys.argv[3])
     myc = mydb.cursor()
     myc.execute("SELECT * FROM `states`")
 
