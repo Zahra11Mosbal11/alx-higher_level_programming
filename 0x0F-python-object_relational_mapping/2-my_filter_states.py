@@ -9,8 +9,8 @@ if __name__ == "__main__":
     mydb = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
                            db=sys.argv[3])
     myc = mydb.cursor()
-    search_name = sys.argv[4]
-    myc.execute("SELECT * FROM `states` WHERE `name` = %s", (search_name,))
+    myc.execute("SELECT * FROM `states` WHERE `name` = '{}'"
+                .format(sys.argv[4]))
 
     for state in myc.fetchall():
         print(state)
